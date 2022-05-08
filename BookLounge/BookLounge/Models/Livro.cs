@@ -61,6 +61,14 @@ namespace BookLounge.Models
         public string Sinopse { get; set; }
 
         /// <summary>
+        /// Nome do ficheiro da Imagem
+        /// </summary>
+        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório!")] // Preenchimento obrigatório
+        [StringLength(35, ErrorMessage = "O {0} deve ter até {1} caracteres!")]
+        [Display(Name = "Imagem")]
+        public string Imagem { get; set; }
+
+        /// <summary>
         /// Define o preço do Livro
         /// </summary>
         [StringLength(6, ErrorMessage = "A {0} deve ter até {1} caracteres!")]
