@@ -25,19 +25,19 @@ namespace BookLounge.Models
         /// Regista a data de encomenda
         /// </summary>
         [Display(Name = "Data Encomenda")]
-        public DateOnly DataEncomenda { get; set; }
+        public DateTime DataEncomenda { get; set; }
 
         /// <summary>
         /// Regista a data de envio
         /// </summary>
         [Display(Name = "Data Envio")]
-        public DateOnly DataEnvio { get; set; }
+        public DateTime DataEnvio { get; set; }
 
         /// <summary>
         /// Regista a data de receção
         /// </summary>
         [Display(Name = "Data Receção")]
-        public DateOnly DataRececao { get; set; }
+        public DateTime DataRececao { get; set; }
 
         /// <summary>
         /// Define o valor total da encomenda
