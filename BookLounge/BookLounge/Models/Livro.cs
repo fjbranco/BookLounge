@@ -67,11 +67,7 @@ namespace BookLounge.Models
         [Display(Name = "Preço")]
         public string Preco { get; set; }
 
-        
-
         // ***************************************************
-
-        
 
         // ###################################################
 
