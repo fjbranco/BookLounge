@@ -5,13 +5,13 @@ namespace BookLounge.Models
     /// <summary>
     /// Descrição dos Temas dos Livros
     /// </summary>
-    public class Tema
+    public class Genero
     {
 
-        public Tema()
+        public Genero()
         {
             // Inicializar a lista de Livros de cada um dos Temas
-            ListaLivros = new HashSet<TemaLivro>();
+            ListaLivros = new HashSet<Livro>();
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace BookLounge.Models
         /// <summary>
         /// Lista de Monumentos associados às Características
         /// </summary>
-        public ICollection<TemaLivro> ListaLivros { get; set; }
+        public ICollection<Livro> ListaLivros { get; set; }
 
     }
 }

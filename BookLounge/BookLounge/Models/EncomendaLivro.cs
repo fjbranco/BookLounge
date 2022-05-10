@@ -30,5 +30,26 @@ namespace BookLounge.Models
         public int LivroFK { get; set; }
         public Livro Livro { get; set; }
 
+        /// <summary>
+        /// Define o Preço total da encomenda
+        /// </summary>
+        [Display(Name = "Preço Encomenda")]
+        public decimal PrecoEncomenda { get; set; }
+
+        /// <summary>
+        /// Define o IVA total da encomenda
+        /// </summary>
+        [Display(Name = "IVA Encomenda")]
+        public int IvaEncomenda { get; set; }
+
+
+        /// <summary>
+        /// Define a quantidade de um livro comprado na encomenda
+        /// </summary>
+        [Display(Name = "IVA Encomenda")]
+        public int Qtd { get; set; }
+
+       
+
     }
 }

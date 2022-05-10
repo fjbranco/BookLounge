@@ -34,16 +34,18 @@ namespace BookLounge.Models
         public DateTime DataEnvio { get; set; }
 
         /// <summary>
-        /// Regista a data de receção
+        /// Define o IVA total da encomenda
         /// </summary>
-        [Display(Name = "Data Receção")]
-        public DateTime DataRececao { get; set; }
+        [Display(Name = "IVA Encomenda")]
+        public int IvaEncomenda { get; set; }
+
 
         /// <summary>
-        /// Define o valor total da encomenda
+        /// Define o estado da encomenda
         /// </summary>
-        [Display(Name = "Valor Encomenda")]
-        public int ValorEncomenda { get; set; }
+        [Display(Name = "Estado da Encomenda")]
+        public bool Estado { get; set; }
+
 
         // ***************************************************
 
@@ -51,7 +53,7 @@ namespace BookLounge.Models
         /// FK para o Utilizador criador da Encomenda
         /// </summary>
         [ForeignKey(nameof(Utilizador))]
-        public int? UtilizadorFK { get; set; }
+        public int UtilizadorFK { get; set; }
         public Utilizador Utilizador { get; set; }
 
         // ###################################################

@@ -12,7 +12,7 @@ namespace BookLounge.Models
             // Inicializar a lista de Encomendas de cada um dos Livros
             ListaEncomendas = new HashSet<EncomendaLivro>();
             // Inicializar a lista de Temass de cada um dos Livros
-            ListaTemas = new HashSet<TemaLivro>();
+            ListaTemas = new HashSet<Genero>();
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace BookLounge.Models
         [Required(ErrorMessage = "A {0} é de preenchimento obrigatório!")] // Preenchimento obrigatório
         [StringLength(13, ErrorMessage = "O {0} deve ter até {1} caracteres!")]
         [Display(Name = "ISBN")]
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
 
         /// <summary>
         /// Faz uma descrição do Livro
@@ -73,7 +73,14 @@ namespace BookLounge.Models
         /// </summary>
         [StringLength(6, ErrorMessage = "A {0} deve ter até {1} caracteres!")]
         [Display(Name = "Preço")]
-        public string Preco { get; set; }
+        public decimal Preco { get; set; }
+
+
+        /// <summary>
+        /// Define o IVA do livro
+        /// </summary>
+        [Display(Name = "IVA")]
+        public int IVA { get; set; }
 
         // ***************************************************
 
@@ -89,7 +96,7 @@ namespace BookLounge.Models
         /// <summary>
         /// Lista de Temas do Livro
         /// </summary>
-        public ICollection<TemaLivro> ListaTemas { get; set; }
+        public ICollection<Genero> ListaTemas { get; set; }
     }
 
 }
