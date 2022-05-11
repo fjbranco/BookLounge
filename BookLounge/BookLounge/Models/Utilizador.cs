@@ -21,21 +21,6 @@ namespace BookLounge.Models
         public int Id { get; set; }
 
         /// <summary>
-        /// Define o Login do Utilizador 
-        /// </summary>
-        [Required(ErrorMessage = "O {0} é de preenchimento obrigatório!")] // Preenchimento obrigatório
-        [StringLength(15, ErrorMessage = "O {0} não pode ter mais de {1} caracteres!")]
-        [RegularExpression("[a-z]")]
-        public string Login { get; set; }
-
-        /// <summary>
-        /// Define a Password do Utilizador
-        /// </summary>
-        [Required(ErrorMessage = "A {0} é de preenchimento obrigatório!")] // Preenchimento obrigatório
-        [StringLength(25, MinimumLength = 8, ErrorMessage = "O {0} deve ter {2} até {1} caracteres!")]
-        public string Password { get; set; }
-
-        /// <summary>
         /// Identifica o Nome do Utilizador
         /// </summary>
         [Required(ErrorMessage = "O {0} é de preenchimento obrigatório!")] // Preenchimento obrigatório
@@ -94,7 +79,6 @@ namespace BookLounge.Models
         /// Lista de Encomendas criadas pelo utilizador
         /// </summary>
         public ICollection<Encomenda> ListaEncomendas { get; set; }
-
         
     }
 

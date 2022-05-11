@@ -11,7 +11,7 @@ namespace BookLounge.Models
         {
             // Inicializar a lista de Encomendas de cada um dos Livros
             ListaEncomendas = new HashSet<EncomendaLivro>();
-            // Inicializar a lista de Temass de cada um dos Livros
+            // Inicializar a lista de Géneros de cada um dos Livros
             ListaTemas = new HashSet<Genero>();
         }
 
@@ -75,7 +75,6 @@ namespace BookLounge.Models
         [Display(Name = "Preço")]
         public decimal Preco { get; set; }
 
-
         /// <summary>
         /// Define o IVA do livro
         /// </summary>
@@ -94,9 +93,10 @@ namespace BookLounge.Models
 
         // associar os Livros às Encomendas
         /// <summary>
-        /// Lista de Temas do Livro
+        /// Lista de Géneros do Livro
         /// </summary>
         public ICollection<Genero> ListaTemas { get; set; }
+    
     }
 
 }

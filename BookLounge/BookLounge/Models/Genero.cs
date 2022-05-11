@@ -15,16 +15,16 @@ namespace BookLounge.Models
         }
 
         /// <summary>
-        /// Identificador de cada um dos Temas do Livro
+        /// Identificador de cada um dos Géneros do Livro
         /// </summary>
         [Key]
         public int Id { get; set; }
 
         /// <summary>
-        /// Designa o tema do livro
+        /// Designa o Género do livro
         /// </summary>
         [StringLength(40, ErrorMessage = "O {0} não deve ter mais de {1} caracteres!")]
-        public string DesignacaoTema { get; set; }
+        public string DesignacaoGenero { get; set; }
 
         // ###################################################
 

@@ -39,13 +39,11 @@ namespace BookLounge.Models
         [Display(Name = "IVA Encomenda")]
         public int IvaEncomenda { get; set; }
 
-
         /// <summary>
-        /// Define o estado da encomenda
+        /// Define o estado da encomenda, se é finalizada ou cancelada pelo utilizador
         /// </summary>
         [Display(Name = "Estado da Encomenda")]
-        public bool Estado { get; set; }
-
+        public bool EstadoEncomenda { get; set; }
 
         // ***************************************************
 

@@ -42,14 +42,11 @@ namespace BookLounge.Models
         [Display(Name = "IVA Encomenda")]
         public int IvaEncomenda { get; set; }
 
-
         /// <summary>
         /// Define a quantidade de um livro comprado na encomenda
         /// </summary>
         [Display(Name = "IVA Encomenda")]
         public int Qtd { get; set; }
-
-       
 
     }
 }
