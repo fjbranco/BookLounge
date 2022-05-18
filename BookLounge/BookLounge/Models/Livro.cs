@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BookLounge.Models
 {
@@ -69,10 +70,19 @@ namespace BookLounge.Models
         public string Imagem { get; set; }
 
         /// <summary>
+        /// atributo auxiliar para ajudar a aplicação a recolher o preço dos livros
+        /// </summary>
+        [NotMapped]  // esta anotação diz à EF (entity framework) que este atributo não é representado na base de dados
+        [Required]
+        [RegularExpression("[0-9]{1,3}[,.]?[0-9]{0,2}", ErrorMessage = "É necessário escrever um preço para o livro.")]
+        [Display(Name = "Preco")]
+        public string AuxPreco { get; set; }
+
+        /// <summary>
         /// Define o preço do Livro
         /// </summary>
-        [StringLength(6, ErrorMessage = "A {0} deve ter até {1} caracteres!")]
         [Display(Name = "Preço")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Preco { get; set; }
 
         /// <summary>

@@ -34,6 +34,7 @@ namespace BookLounge.Models
         /// Define o Preço total da encomenda
         /// </summary>
         [Display(Name = "Preço Encomenda")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal PrecoEncomenda { get; set; }
 
         /// <summary>

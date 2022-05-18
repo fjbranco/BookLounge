@@ -4,6 +4,7 @@ using BookLounge.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookLounge.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220518160949_CorrecaoPrecoLivro2")]
+    partial class CorrecaoPrecoLivro2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasIndex("UtilizadorFK");
 
-                    b.ToTable("Encomendas", (string)null);
+                    b.ToTable("Encomendas");
                 });
 
             modelBuilder.Entity("BookLounge.Models.EncomendaLivro", b =>
@@ -81,7 +83,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasIndex("LivroFK");
 
-                    b.ToTable("EncomendaLivros", (string)null);
+                    b.ToTable("EncomendaLivros");
                 });
 
             modelBuilder.Entity("BookLounge.Models.Genero", b =>
@@ -98,7 +100,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Temas", (string)null);
+                    b.ToTable("Temas");
                 });
 
             modelBuilder.Entity("BookLounge.Models.Livro", b =>
@@ -146,7 +148,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Livros", (string)null);
+                    b.ToTable("Livros");
                 });
 
             modelBuilder.Entity("BookLounge.Models.Utilizador", b =>
@@ -188,7 +190,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Utilizadores", (string)null);
+                    b.ToTable("Utilizadores");
                 });
 
             modelBuilder.Entity("GeneroLivro", b =>
@@ -203,7 +205,7 @@ namespace BookLounge.Data.Migrations
 
                     b.HasIndex("ListaTemasId");
 
-                    b.ToTable("GeneroLivro", (string)null);
+                    b.ToTable("GeneroLivro");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
